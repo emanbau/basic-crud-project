@@ -1,7 +1,7 @@
 const graphql = require('graphql');
 const { GraphQLSchema, GraphQLObjectType } = graphql;
 const { GET_ALL_USERS } = require('./Queries/User');
-const { CREATE_USER } = require('./Mutations/User');
+const { CREATE_USER, DELETE_USER, UPDATE_PASSWORD } = require('./Mutations/User');
 
 
 const RootQuery = new GraphQLObjectType({
@@ -14,7 +14,9 @@ const RootQuery = new GraphQLObjectType({
 const Mutation = new GraphQLObjectType({
     name: "Mutation",
     fields: {
-        createUser: CREATE_USER
+        createUser: CREATE_USER,
+        deleteUser: DELETE_USER,
+        updatePassword: UPDATE_PASSWORD,
     }
 });
 

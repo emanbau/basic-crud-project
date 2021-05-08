@@ -21,4 +21,4 @@ const Users = new EntitySchema({
     }
 })
 
-module.exports = { Users }
+module.exports = { Users };
