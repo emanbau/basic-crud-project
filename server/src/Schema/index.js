@@ -1,13 +1,14 @@
 const graphql = require('graphql');
 const { GraphQLSchema, GraphQLObjectType } = graphql;
-const { GET_ALL_USERS } = require('./Queries/User');
+const { GET_ALL_USERS, GET_USER } = require('./Queries/User');
 const { CREATE_USER, DELETE_USER, UPDATE_PASSWORD } = require('./Mutations/User');
 
 
 const RootQuery = new GraphQLObjectType({
     name: "RootQuery",
     fields: {
-        getAllUsers: GET_ALL_USERS
+        getAllUsers: GET_ALL_USERS,
+        getUser: GET_USER
     }
 });
 
