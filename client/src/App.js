@@ -10,6 +10,7 @@ import {
 from '@apollo/client';
 import { onError } from '@apollo/client/link/error';
 import Signup from './Pages/Signup';
+import Login from './Pages/Login';
 
 const errorLink = onError(({ graphqlErrors, networkError }) => {
   if (graphqlErrors) {
@@ -34,7 +35,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="App">
-        <Signup />
+        <Login />
       </div>
     </ApolloProvider>
   );

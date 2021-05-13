@@ -22,15 +22,12 @@ function Signup() {
             console.error(e);
         }
 
-        if (error) {
-            console.log(error);
-        }
-
     };
 
     useEffect(() => {
+        if (error) console.log(error);
         if (!loading) console.log(data);
-    }, [loading, data])
+    }, [error, loading, data])
 
     return (
         <div>
