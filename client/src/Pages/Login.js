@@ -32,7 +32,7 @@ function Login() {
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
             />
-            <button onClick={getUser}>Log In</button>
+            <button onClick={() => getUser()}>Log In</button>
         </div>
     )
 }
